@@ -4,5 +4,8 @@
 
 @layer base {
 
+  html{
+    @apply bg-[#ededf6] font-brand  ;
+  }
   
 }
