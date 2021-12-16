@@ -5,7 +5,11 @@
 @layer base {
 
   html{
-    @apply bg-[#ededf6] font-brand  ;
+    @apply bg-[#ededf6] font-brand sm:w-[clamp(640px,90vw,1600px)] sm:m-auto;
+  }
+
+  body{
+   
   }
   
 }

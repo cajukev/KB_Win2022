@@ -2,8 +2,7 @@
 	import '../app.css';
 </script>
 
-<main>
-	<div class="ab"></div>
+<main class="">
 
 	<slot />
 </main>
