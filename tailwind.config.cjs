@@ -13,7 +13,9 @@ module.exports = {
     extend: {
       animation: {
         'logoFadeIn':'fadeIn 8s linear',
-        'logoLineIn':'lineIn 8s linear infinite'
+        'logoLineIn':'lineIn 8s linear infinite',
+        'tagFadeIn':'fadeIn 4s linear',
+        'tagFadeSlideIn':'slideIn 2s ease, fadeIn 2s ease',
       },
       keyframes: {
         fadeIn: {
@@ -23,6 +25,10 @@ module.exports = {
         lineIn: {
           '0%' : { 'stroke-dashoffset': 0 },
           '100%': { 'stroke-dashoffset':-708.246 },
+        },
+        slideIn: {
+          '0%' : { 'transform': 'translatex(5rem)' },
+          '100%': { 'transform': 'translatex(0)' },
         }
       }
     },
