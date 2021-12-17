@@ -1,8 +1,11 @@
 <script lang="ts">
 	import '../app.css';
+	import Header from "../components/header.svelte";
+  import Nav from "../components/nav.svelte";
 </script>
 
-<main class="">
-
+<main class="sm:px-4">
+	<Header></Header>
+	<Nav></Nav>
 	<slot />
 </main>

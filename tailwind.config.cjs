@@ -13,7 +13,8 @@ module.exports = {
     extend: {
       animation: {
         'logoFadeIn':'fadeIn 8s linear',
-        'logoLineIn':'lineIn 8s linear infinite',
+        'logoLineIn':'lineIn 20s linear infinite',
+        'logoLineInSlow':'lineIn 40s linear infinite',
         'tagFadeIn':'fadeIn 4s linear',
         'tagFadeSlideIn':'slideIn 2s ease, fadeIn 2s ease',
       },
