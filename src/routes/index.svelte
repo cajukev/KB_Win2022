@@ -1,12 +1,12 @@
 <script>
-  import '@slightlyoff/lite-vimeo';
-
+  import VideoContainer from "../components/videoContainer.svelte";
 </script>
 
 <section id="APropos" class="h-screen">
   <p class="">A Propos</p>
   <h1>Je crée des sites web, de la conception au développement</h1>
-  <lite-vimeo videoid="364402896"></lite-vimeo>
+  <VideoContainer height={900}, width={600}, source={"658006740"}></VideoContainer>
+  
 </section>
 <section id="Solutions" class="h-screen">
   <p>Solutions</p>
