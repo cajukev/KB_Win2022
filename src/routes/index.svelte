@@ -8,10 +8,10 @@
   <VideoContainer num={"1"}></VideoContainer>
 
 </section>
-<section id="Solutions" class="h-screen">
+<section id="Solutions" class="">
   <p>Solutions</p>
 </section>
-<section id="Contacter" class="h-screen">
+<section id="Contacter" class="">
   <p>Contacter</p>
 </section>
 
