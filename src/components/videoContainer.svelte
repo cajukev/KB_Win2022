@@ -30,13 +30,13 @@ let playFocus = () => {
 }
 </script>
 
-<div class="grid max-w-[700px]">
+<div class="grid max-w-[700px] aspect-[7/9]">
 	<video
 		bind:this={video}
 		on:pause={pause}
 		tabindex="-1"
 		src="video{num}.mp4"
-		class="row-start-1 row-span-1 col-start-1 col-span-1 w-full z-0 aspect-[7/9] "
+		class="row-start-1 row-span-1 col-start-1 col-span-1 w-full z-0  "
 		
 	/>
 	<picture
