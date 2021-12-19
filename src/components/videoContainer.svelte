@@ -76,7 +76,7 @@ let playFocus = () => {
 		/>
 		<source srcset="thumbnails/thumbnail{num}-700.webp " type="image/webp" />
 		<source srcset="thumbnails/thumbnail{num}-700.jpg" type="image/jpeg" />
-		<img src="thumbnails/thumbnail{num}-800.jpg" class="w-full"/>
+		<img src="thumbnails/thumbnail{num}-800.jpg" class="w-full aspect-[7/9]"/>
 	</picture>
 	<div bind:this={playOverlay} on:click={swap}  class="row-start-1 row-span-1 col-start-1 col-span-1 grid bg-[rgba(0,0,0,0.5)] w-full h-full z-30  cursor-pointer transition-opacity">
 		<button
