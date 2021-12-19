@@ -42,7 +42,7 @@ let playFocus = () => {
 	<picture
 		bind:this={thumbnail}
 		id="thumbnail"
-		class="row-start-1 row-span-1 col-start-1 col-span-1 z-10 w-full aspect-h-1 aspect-[7/9]" 
+		class="row-start-1 row-span-1 col-start-1 col-span-1 z-10 w-full aspect-[7/9]" 
 	>
 		<source
 			srcset="thumbnails/thumbnail{num}-400.webp"

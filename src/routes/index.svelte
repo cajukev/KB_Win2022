@@ -6,7 +6,7 @@
 	id="APropos"
 	class="
 mt-8 bg-zinc-50 pt-4 shadow-lg shadow-shadowColor flex flex-col items-center 
-2xl:bg-transparent 2xl:shadow-none 2xl:grid 2xl:grid-cols-[repeat(2,auto)] 2xl:grid-rows-[repeat(3,auto)] "
+2xl:bg-transparent 2xl:shadow-none 2xl:grid 2xl:grid-cols-[60%,40%] 2xl:grid-rows-[repeat(3,auto)] "
 >
 	<p
 		class="text-center italic text-slate-700 text-[clamp(16px,1.8vw,32px)]
@@ -28,8 +28,10 @@ mt-8 bg-zinc-50 pt-4 shadow-lg shadow-shadowColor flex flex-col items-center
 	</div>
 
 	<div class="relative  2xl:self-start">
-		<div class="flex flex-wrap max-w-[700px] 2xl:after:absolute 2xl:after:w-full 2xl:after:h-full 2xl:after:bg-slate-50 
-    2xl:after:scale-x-150 2xl:after:shadow-md 2xl:after:shadow-shadowColor 2xl:after:-z-10">
+		<div
+			class="flex flex-wrap max-w-[700px] 2xl:after:absolute 2xl:after:w-full 2xl:after:h-full 2xl:after:bg-slate-50 
+    2xl:after:scale-x-150 2xl:after:shadow-md 2xl:after:shadow-shadowColor 2xl:after:-z-10"
+		>
 			<div class="p-4 2xl:pl-0 2xl:pr-[6rem] 3xl:py-6">
 				<p>Ce que je maîtrise 🎓</p>
 				<ul class="list-disc pl-7">
