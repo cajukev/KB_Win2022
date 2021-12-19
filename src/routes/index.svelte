@@ -21,7 +21,7 @@ mt-8 bg-zinc-50 pt-4 shadow-lg shadow-shadowColor flex flex-col items-center
 		Je crée des sites web, de la <span>conception</span> au <span>développement</span>
 	</h1>
 	<div
-		class="mt-8 max-w-fit w-full  aspect-[7/9] shadow-md shadow-shadowColor 
+		class="mt-8 w-fit  aspect-[7/9] shadow-md shadow-shadowColor 
   col-start-2 col-span-1 row-start-1 row-span-3 justify-self-end 2xl:mt-0 "
 	>
 		<VideoContainer num={'1'} />
