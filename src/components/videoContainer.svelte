@@ -30,7 +30,7 @@ let playFocus = () => {
 }
 </script>
 
-<div class="grid max-w-[840px]">
+<div class="grid max-w-[700px]">
 	<video
 		bind:this={video}
 		on:pause={pause}
@@ -78,11 +78,11 @@ let playFocus = () => {
 		<source srcset="thumbnails/thumbnail{num}-700.jpg" type="image/jpeg" />
 		<img src="thumbnails/thumbnail{num}-800.jpg" class="w-full"/>
 	</picture>
-	<div bind:this={playOverlay} on:click={swap}  class="row-start-1 row-span-1 col-start-1 col-span-1 grid bg-[rgba(0,0,0,0.5)] w-full h-full z-30  cursor-pointer">
+	<div bind:this={playOverlay} on:click={swap}  class="row-start-1 row-span-1 col-start-1 col-span-1 grid bg-[rgba(0,0,0,0.5)] w-full h-full z-30  cursor-pointer transition-opacity">
 		<button
 			bind:this={playButton}
 			on:focus={playFocus}
-			class="w-1/3 place-self-center rounded-full transform transition-transform focus:scale-110 hover:scale-110"
+			class="w-1/3 place-self-center rounded-full transform transition-transform focus:scale-110 hover:scale-110 transition-opacity"
 		>
 			<svg
 				viewBox="0 0 145 144"

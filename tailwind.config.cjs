@@ -22,6 +22,9 @@ module.exports = {
         shadowColor: 'rgba(45, 45, 82, 0.1)',
         brandBlue: '#0400C7',
       },
+      screens:{
+        '3xl': '1920px'
+      },
       keyframes: {
         fadeIn: {
           '0%' : { opacity:0 },
