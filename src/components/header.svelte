@@ -11,7 +11,7 @@
 			/>
 		</svg>
 	</div>
-  <div class="text-center relative mx-10 sm:mx-0 sm:shadow-lg sm:shadow-slate-300 sm:text-left sm:bg-zinc-50  sm:px-6 sm:grid sm:animate-tagFadeSlideIn">
+  <div class="text-center relative mx-10 sm:mx-0 sm:shadow-lg sm:shadow-shadowColor sm:text-left sm:bg-zinc-50  sm:px-6 sm:grid sm:animate-tagFadeSlideIn">
     <p class="font-semibold self-end text-[clamp(16px,2vw,36px)]" >
       Kevin Brousseau
     </p>
