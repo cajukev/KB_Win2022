@@ -36,8 +36,7 @@ let playFocus = () => {
 		on:pause={pause}
 		tabindex="-1"
 		src="video{num}.mp4"
-		class="row-start-1 row-span-1 col-start-1 col-span-1 w-full z-0  "
-		
+		class="row-start-1 row-span-1 col-start-1 col-span-1 w-full z-0"
 	/>
 	<picture
 		bind:this={thumbnail}
@@ -82,7 +81,7 @@ let playFocus = () => {
 		<button
 			bind:this={playButton}
 			on:focus={playFocus}
-			class="w-1/3 place-self-center rounded-full transform transition-transform focus:scale-110 hover:scale-110 transition-opacity"
+			class="w-1/3 place-self-center rounded-full transform transition-[transform,opacity] focus:scale-110 hover:scale-110 "
 		>
 			<svg
 				viewBox="0 0 145 144"
