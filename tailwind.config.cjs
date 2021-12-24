@@ -12,7 +12,8 @@ module.exports = {
     },
     extend: {
       animation: {
-        'logoFadeIn':'fadeIn 8s linear',
+        'logoFadeIn':'fadeIn 1s linear',
+        'logoScaleIn':'scaleIn 1s ease',
         'logoLineIn':'lineIn 20s linear infinite',
         'logoLineInSlow':'lineIn 40s linear infinite',
         'tagFadeIn':'fadeIn 4s linear',
@@ -37,7 +38,11 @@ module.exports = {
         slideIn: {
           '0%' : { 'transform': 'translatex(5rem)' },
           '100%': { 'transform': 'translatex(0)' },
-        }
+        },
+        scaleIn:{
+          '0%' : { 'transform': 'scale(0.8)' },
+          '100%': { 'transform': 'scale(1)' },
+        },
       }
     },
   },

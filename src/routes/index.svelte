@@ -1,5 +1,25 @@
+<script context="module">
+	export const load = async ({ fetch }) => {
+		const res = await fetch('/api/timeslots')
+			.then((response) => response.json())
+			.then((json) => {
+				return json;
+			});
+
+		const data = await res;
+
+		return {
+			props: { timeslots: data }
+		};
+	};
+</script>
+
 <script>
-	import VideoContainer from '../components/videoContainer.svelte';
+	import Timepicker from '../components/timepicker.svelte';
+import VideoContainer from '../components/videoContainer.svelte';
+	export let timeslots;
+
+
 </script>
 
 <section
@@ -36,7 +56,8 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 			class="flex flex-wrap justify-center
 			xl:flex-col
 			2xl:justify-start 2xl:flex-row 2xl:min-h-[40vh] 2xl:items-center 2xl:after:absolute 2xl:after:w-full 2xl:after:h-full 2xl:after:bg-slate-50 
-    2xl:after:scale-x-150 2xl:after:shadow-md 2xl:after:shadow-shadowColor 2xl:after:-z-10"
+    2xl:after:scale-x-150 2xl:after:shadow-md 2xl:after:shadow-shadowColor 2xl:after:-z-10
+		3xl:min-h-[30vh]"
 		>
 			<div class="p-4 2xl:pl-0 2xl:pr-16 3xl:py-6">
 				<p class="font-bold text-lg">Ce que je maîtrise 🎓</p>
@@ -97,7 +118,7 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 		xl:col-span-2
     2xl:col-span-1 2xl:text-left 2xl:px-0 2xl:max-w-[60%]"
 	>
-		Je crée des sites web, de la <span>conception</span> au <span>développement</span>
+		Les possibilités sont <span>infinies</span>
 	</h1>
 	<div
 		class="mt-8 w-fit aspect-[7/9] shadow-md shadow-shadowColor
@@ -112,43 +133,29 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 			class="flex flex-wrap justify-center
 			xl:flex-col
 			2xl:justify-start 2xl:flex-row 2xl:min-h-[40vh] 2xl:items-center 2xl:after:absolute 2xl:after:w-full 2xl:after:h-full 2xl:after:bg-slate-50 
-    2xl:after:scale-x-150 2xl:after:shadow-md 2xl:after:shadow-shadowColor 2xl:after:-z-10"
+    2xl:after:scale-x-[2.25] 2xl:after:shadow-md 2xl:after:shadow-shadowColor 2xl:after:-z-10
+		3xl:min-h-[30vh]"
 		>
 			<div class="p-4 2xl:pl-0 2xl:pr-16 3xl:py-6">
-				<p class="font-bold text-lg">Ce que je maîtrise 🎓</p>
-				<ul class="list-disc pl-7 mt-4">
-					<li>HTML / CSS / JS</li>
-					<li>React / Vue / <b>Svelte</b></li>
-					<li>SCSS / Tailwind</li>
-					<li>APIs : Firestore / FaunaDB</li>
-					<li><b>Performance Lighthouse 4x100</b></li>
-					<li>Développement <b>"serverless"</b></li>
-					<li>Développement <b>"responsive"</b></li>
-				</ul>
+				<p class="font-bold text-lg">Un interface moderne</p>
+				<a target="_blank" href="https://al001.netlify.app/">
+					<img src="site1.jpg" alt="" class="w-40 h-20 bg-slate-500" />
+				</a>
+				<p class="italic text-slate-600">Projet de bénévolat</p>
 			</div>
 			<div class="p-4 2xl:pl-0 2xl:pr-16 3xl:py-6">
-				<p class="font-bold text-lg">Ce que je maîtrise 🎓</p>
-				<ul class="list-disc pl-7 mt-4">
-					<li>HTML / CSS / JS</li>
-					<li>React / Vue / <b>Svelte</b></li>
-					<li>SCSS / Tailwind</li>
-					<li>APIs : Firestore / FaunaDB</li>
-					<li><b>Performance Lighthouse 4x100</b></li>
-					<li>Développement <b>"serverless"</b></li>
-					<li>Développement <b>"responsive"</b></li>
-				</ul>
+				<p class="font-bold text-lg">Un API et les données</p>
+				<a target="_blank" href="https://concordiaga.netlify.app//">
+					<img src="site1.jpg" alt="" class="w-40 h-20 bg-slate-500" />
+				</a>
+				<p class="italic text-slate-600">Cours d'Université</p>
 			</div>
 			<div class="p-4 2xl:pl-0 3xl:py-6">
-				<p class="font-bold text-lg">Ce que je maîtrise 🎓</p>
-				<ul class="list-disc pl-7 mt-4">
-					<li>HTML / CSS / JS</li>
-					<li>React / Vue / <b>Svelte</b></li>
-					<li>SCSS / Tailwind</li>
-					<li>APIs : Firestore / FaunaDB</li>
-					<li><b>Performance Lighthouse 4x100</b></li>
-					<li>Développement <b>"serverless"</b></li>
-					<li>Développement <b>"responsive"</b></li>
-				</ul>
+				<p class="font-bold text-lg">De la créativité</p>
+				<a target="_blank" href="https://ggjsnafu.netlify.app/">
+					<img src="site1.jpg" alt="" class="w-40 h-20 bg-slate-500" />
+				</a>
+				<p class="italic text-slate-600">Game Jam</p>
 			</div>
 		</div>
 	</div>
@@ -173,10 +180,10 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 		xl:col-span-2
     2xl:col-span-1 2xl:text-left 2xl:px-0 2xl:max-w-[60%]"
 	>
-		Je crée des sites web, de la <span>conception</span> au <span>développement</span>
+		Laissez-moi vous offrir <span>de l'aide. </span>
 	</h1>
 	<div
-		class="mt-8 w-fit aspect-[7/9] shadow-md shadow-shadowColor
+		class="mt-8 w-full aspect-[7/9] shadow-md shadow-shadowColor
 		xl:col-start-2 xl:self-center
   2xl:col-start-2 2xl:col-span-1 2xl:row-start-1 2xl:row-span-3 2xl:justify-self-end 2xl:mt-0 2xl:w-full"
 	>
@@ -184,49 +191,7 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 	</div>
 
 	<div class="relative xl:row-start-3 2xl:self-start">
-		<div
-			class="flex flex-wrap justify-center
-			xl:flex-col
-			2xl:justify-start 2xl:flex-row 2xl:min-h-[40vh] 2xl:items-center 2xl:after:absolute 2xl:after:w-full 2xl:after:h-full 2xl:after:bg-slate-50 
-    2xl:after:scale-x-150 2xl:after:shadow-md 2xl:after:shadow-shadowColor 2xl:after:-z-10"
-		>
-			<div class="p-4 2xl:pl-0 2xl:pr-16 3xl:py-6">
-				<p class="font-bold text-lg">Ce que je maîtrise 🎓</p>
-				<ul class="list-disc pl-7 mt-4">
-					<li>HTML / CSS / JS</li>
-					<li>React / Vue / <b>Svelte</b></li>
-					<li>SCSS / Tailwind</li>
-					<li>APIs : Firestore / FaunaDB</li>
-					<li><b>Performance Lighthouse 4x100</b></li>
-					<li>Développement <b>"serverless"</b></li>
-					<li>Développement <b>"responsive"</b></li>
-				</ul>
-			</div>
-			<div class="p-4 2xl:pl-0 2xl:pr-16 3xl:py-6">
-				<p class="font-bold text-lg">Ce que je maîtrise 🎓</p>
-				<ul class="list-disc pl-7 mt-4">
-					<li>HTML / CSS / JS</li>
-					<li>React / Vue / <b>Svelte</b></li>
-					<li>SCSS / Tailwind</li>
-					<li>APIs : Firestore / FaunaDB</li>
-					<li><b>Performance Lighthouse 4x100</b></li>
-					<li>Développement <b>"serverless"</b></li>
-					<li>Développement <b>"responsive"</b></li>
-				</ul>
-			</div>
-			<div class="p-4 2xl:pl-0 3xl:py-6">
-				<p class="font-bold text-lg">Ce que je maîtrise 🎓</p>
-				<ul class="list-disc pl-7 mt-4">
-					<li>HTML / CSS / JS</li>
-					<li>React / Vue / <b>Svelte</b></li>
-					<li>SCSS / Tailwind</li>
-					<li>APIs : Firestore / FaunaDB</li>
-					<li><b>Performance Lighthouse 4x100</b></li>
-					<li>Développement <b>"serverless"</b></li>
-					<li>Développement <b>"responsive"</b></li>
-				</ul>
-			</div>
-		</div>
+		<Timepicker timeslots={timeslots}></Timepicker>
 	</div>
 </section>
 

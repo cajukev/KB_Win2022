@@ -5,7 +5,8 @@
 @layer base {
 
   html{
-    @apply bg-[#ededf6] font-brand sm:w-[clamp(640px,90vw,2440px)] sm:m-auto overflow-x-hidden scroll-smooth;
+    @apply bg-[#ededf6] font-brand sm:w-[clamp(640px,90vw,2440px)] sm:m-auto overflow-x-hidden scroll-smooth
+    3xl:text-[0.9vw];
   }
 
   body{

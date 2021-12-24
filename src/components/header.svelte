@@ -6,7 +6,7 @@
 		class="self-center justify-self-center sm:w-full sm:self-start sm:justify-self-start sm:pr-[clamp(16px,6vw,128px)] h-full"
 	>
 		<svg
-			class="max-w-[16rem] h-full w-full p-8 drop-shadow-md shadow-slate-900 animate-logoFadeIn sm:max-w-full sm:p-0"
+			class="max-w-[16rem] h-full w-full p-8 drop-shadow-md shadow-slate-900 animate-logoFadeIn sm:max-w-full sm:p-0 sm:origin-bottom-left"
 			viewBox="0 0 128 89"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +34,7 @@
 			class="font-semibold text-slate-600 self-center text-[clamp(16px,1.8vw,32px)] 
     sm:px-[1.5em]"
 		>
-			Bachelier en Sciences Informatiques <span class="text-slate-400"> *</span>
+			Bachelier en Sciences Informatiques<span class="text-slate-400">*</span>
 		</p>
 		<p
 			class="italic text-slate-600 self-start text-[clamp(16px,1.8vw,32px)] leading-tight 

@@ -1,0 +1,67 @@
+<script>
+	export let timeslots;
+
+	const date = new Date();
+	let dateDay = date.getDate().toString();
+	if (dateDay.length == 1) {
+		dateDay = '0' + dateDay;
+	}
+	let dateMonth = (date.getMonth() + 1).toString();
+	if (dateMonth.length == 1) {
+		dateMonth = '0' + dateMonth;
+	}
+	const min = date.getFullYear() + '-' + dateMonth + '-' + dateDay;
+
+	const dateMax = new Date(Date.now() + 6.048e8 * 2);
+	let dateMaxDay = dateMax.getDate().toString();
+	if (dateMaxDay.length == 1) {
+		dateMaxDay = '0' + dateMaxDay;
+	}
+	let dateMaxMonth = (dateMax.getMonth() + 1).toString();
+	if (dateMaxMonth.length == 1) {
+		dateMaxMonth = '0' + dateMaxMonth;
+	}
+	const max = dateMax.getFullYear() + '-' + dateMaxMonth + '-' + dateMaxDay;
+
+  let timeSlotTimes = ["12:00","12:10","12:20","12:30","12:40","12:50",
+  "13:00","13:10","13:20","13:30","13:40","13:50",
+  "14:00","14:10","14:20","14:30","14:40","14:50",
+  "15:00","15:10","15:20","15:30","15:40","15:50",
+  "16:00","16:10","16:20","16:30","16:40","16:50",];
+
+	let timeSlotTimeDates;
+
+	$: timeSlotTimeDates =  [datePicked+"/12:00",datePicked+"/12:10",datePicked+"/12:20",datePicked+"/12:30",datePicked+"/12:40",datePicked+"/12:50",
+  datePicked+"/13:00",datePicked+"/13:10",datePicked+"/13:20",datePicked+"/13:30",datePicked+"/13:40",datePicked+"/13:50",
+  datePicked+"/14:00",datePicked+"/14:10",datePicked+"/14:20",datePicked+"/14:30",datePicked+"/14:40",datePicked+"/14:50",
+  datePicked+"/15:00",datePicked+"/15:10",datePicked+"/15:20",datePicked+"/15:30",datePicked+"/15:40",datePicked+"/15:50",
+  datePicked+"/16:00",datePicked+"/16:10",datePicked+"/16:20",datePicked+"/16:30",datePicked+"/16:40",datePicked+"/16:50"];
+
+	
+
+  let datePicked = date.getFullYear()+"-"+dateMonth +"-"+dateDay;
+	$: console.log(datePicked)
+    
+	const isTimeSlotTaken = (timeslot) => {
+		let flag = true;
+		timeslots.forEach(taken => {
+			if(taken.substring(11,16)==timeslot.substring(11,16) && taken.substring(0,2)==timeslot.substring(8,10)){
+				flag = false;
+			}
+		});
+		return flag;
+	}
+
+</script>
+{timeslots}
+<p>Entrons en contact! 👋</p>
+<input type="date" bind:value={datePicked} {min} {max} />
+<label for="time">Choisir un temps</label>
+<select name="Time" id="" title="Pick a time">
+	{#each timeSlotTimeDates as timeSlotTimeDate}
+	{#if isTimeSlotTaken(timeSlotTimeDate)}
+		<option value={timeSlotTimeDate.substring(11,16)} >{timeSlotTimeDate.substring(11,16)}</option>
+	{/if}
+		
+	{/each}
+</select>

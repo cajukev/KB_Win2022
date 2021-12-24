@@ -30,7 +30,7 @@ let playFocus = () => {
 }
 </script>
 
-<div class="grid max-w-[700px] w-full aspect-[7/9]">
+<div class="grid w-full aspect-[7/9]">
 	<video
 		bind:this={video}
 		on:pause={pause}
