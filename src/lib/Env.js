@@ -1,0 +1,1 @@
+export const VITE_ADMIN_PW = import.meta.env.VITE_ADMIN_PW;

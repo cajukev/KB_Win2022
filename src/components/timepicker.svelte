@@ -38,9 +38,11 @@
   datePicked+"/16:00",datePicked+"/16:10",datePicked+"/16:20",datePicked+"/16:30",datePicked+"/16:40",datePicked+"/16:50"];
 
 	
-
+	let timePicked;
   let datePicked = date.getFullYear()+"-"+dateMonth +"-"+dateDay;
 	$: console.log(datePicked)
+	let dateTime;
+	$: dateTime = dateDay+'/'+dateMonth+'/'+date.getFullYear()+'-'+timePicked
     
 	const isTimeSlotTaken = (timeslot) => {
 		let flag = true;
@@ -52,12 +54,27 @@
 		return flag;
 	}
 
+	const submit = async () => {
+		
+
+
+		const res = await fetch('/api/timeslots', {
+			method: 'POST',
+			body: JSON.stringify({Date:dateTime})
+		})
+			.then((response) => response.json())
+			.then((json) => {
+				return json;
+			});
+
+	}
+
 </script>
 {timeslots}
 <p>Entrons en contact! 👋</p>
 <input type="date" bind:value={datePicked} {min} {max} />
 <label for="time">Choisir un temps</label>
-<select name="Time" id="" title="Pick a time">
+<select bind:value={timePicked} name="Time" id="" title="Pick a time">
 	{#each timeSlotTimeDates as timeSlotTimeDate}
 	{#if isTimeSlotTaken(timeSlotTimeDate)}
 		<option value={timeSlotTimeDate.substring(11,16)} >{timeSlotTimeDate.substring(11,16)}</option>
@@ -65,3 +82,4 @@
 		
 	{/each}
 </select>
+<button on:click={submit}>Submit</button>
