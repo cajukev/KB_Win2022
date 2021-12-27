@@ -93,16 +93,31 @@
 
 	let timePicked;
 	let datePicked = date.getFullYear() + '-' + dateMonth + '-' + dateDay;
+	
 	$: console.log(datePicked);
 	let dateTime;
 	$: dateTime = dateDay + '/' + dateMonth + '/' + date.getFullYear() + '-' + timePicked;
 
 	const isTimeSlotTaken = (timeslot) => {
 		let flag = true;
+		let day = String(date.getDate())
+		if (day.length == 1) {
+			day = '0' + day;
+		}
+		let hour = String(date.getHours())
+		if (hour.length == 1) {
+			hour = '0' + hour;
+		}
+		let minute = String(date.getMinutes())
+		if (minute.length == 1) {
+			minute = '0' + minute;
+		}
 		timeslots.forEach((taken) => {
 			if (
 				taken.substring(11, 16) == timeslot.substring(11, 16) &&
-				taken.substring(0, 2) == timeslot.substring(8, 10)
+				taken.substring(0, 2) == timeslot.substring(8, 10) ||
+				parseInt(timeslot.substring(11,13)) < parseInt(hour) &&
+				day == timeslot.substring(8, 10)
 			) {
 				flag = false;
 			}
