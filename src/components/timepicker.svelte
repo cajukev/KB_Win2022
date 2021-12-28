@@ -1,4 +1,5 @@
 <script>
+	import emailjs from 'emailjs-com';
 	export let timeslots;
 
 	const date = new Date();
@@ -131,6 +132,13 @@
 	let description;
 
 	const submit = async () => {
+		// Send enail
+		emailjs.init("user_5M4eTkkJad5yzMdMBPJs4")
+			emailjs.send('service_liae9za', 'template_193jaog', {nom:nom,telephone:telephone,email:email,description:description})
+			.then(status => {
+				console.log(status)
+			})
+
 		const res = await fetch('/api/timeslots', {
 			method: 'POST',
 			body: JSON.stringify({ Date: dateTime, nom:nom, telephone:telephone, email:email, description:description })
@@ -138,7 +146,10 @@
 			.then((response) => response.json())
 			.then((json) => {
 				return json;
+
 			});
+			
+
 	};
 </script>
 
@@ -164,5 +175,4 @@
 	<label for="description">Description</label>
 	<input bind:value={description} type="text" name="description" />
 	<button on:click={submit}>Submit</button>
-	
 </form>
