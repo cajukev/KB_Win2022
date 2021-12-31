@@ -2,9 +2,11 @@
 	import '../app.css';
 	import Header from "../components/header.svelte";
   import Nav from "../components/nav.svelte";
+	import Toast from '../components/toast.svelte';
 </script>
 
 <main class="sm:px-4">
+	<!-- <Toast message="Toast"></Toast> -->
 	<Header></Header>
 	<Nav></Nav>
 	<slot />

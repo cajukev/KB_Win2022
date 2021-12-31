@@ -89,7 +89,19 @@
 		datePicked + '/16:20',
 		datePicked + '/16:30',
 		datePicked + '/16:40',
-		datePicked + '/16:50'
+		datePicked + '/16:50',
+		datePicked + '/17:00',
+		datePicked + '/17:10',
+		datePicked + '/17:20',
+		datePicked + '/17:30',
+		datePicked + '/17:40',
+		datePicked + '/17:50',
+		datePicked + '/18:00',
+		datePicked + '/18:10',
+		datePicked + '/18:20',
+		datePicked + '/18:30',
+		datePicked + '/18:40',
+		datePicked + '/18:50'
 	];
 
 	let timePicked;
@@ -113,11 +125,15 @@
 		if (minute.length == 1) {
 			minute = '0' + minute;
 		}
+		console.log()
 		timeslots.forEach((taken) => {
 			if (
 				taken.substring(11, 16) == timeslot.substring(11, 16) &&
 				taken.substring(0, 2) == timeslot.substring(8, 10) ||
 				parseInt(timeslot.substring(11,13)) < parseInt(hour) &&
+				day == timeslot.substring(8, 10) ||
+				parseInt(timeslot.substring(11,13)) == parseInt(hour) &&
+				parseInt(timeslot.substring(14,16)) < parseInt(minute) &&
 				day == timeslot.substring(8, 10)
 			) {
 				flag = false;
@@ -132,16 +148,16 @@
 	let description;
 
 	const submit = async () => {
-		// Send enail
+		// Send email
 		emailjs.init("user_5M4eTkkJad5yzMdMBPJs4")
-			emailjs.send('service_liae9za', 'template_193jaog', {nom:nom,telephone:telephone,email:email,description:description})
+			emailjs.send('service_liae9za', 'template_193jaog', {nom:nom,telephone:telephone,email:email,description:description, datetime:dateTime})
 			.then(status => {
 				console.log(status)
 			})
-
+		// Post to 
 		const res = await fetch('/api/timeslots', {
 			method: 'POST',
-			body: JSON.stringify({ Date: dateTime, nom:nom, telephone:telephone, email:email, description:description })
+			body: JSON.stringify({ Date: dateTime, nom:nom, telephone:telephone, email:email, description:description, datetime:dateTime })
 		})
 			.then((response) => response.json())
 			.then((json) => {
@@ -155,9 +171,10 @@
 
 <p>Entrons en contact! 👋</p>
 <form class="flex flex-col">
-	<input type="date" bind:value={datePicked} {min} {max} />
+	<label for="date">Choisir une date</label>
+	<input type="date" name="date" bind:value={datePicked} {min} {max} />
 	<label for="time">Choisir un temps</label>
-	<select bind:value={timePicked} name="Time" id="" title="Pick a time">
+	<select bind:value={timePicked} name="time" id="" title="Pick a time">
 		{#each timeSlotTimeDates as timeSlotTimeDate}
 			{#if isTimeSlotTaken(timeSlotTimeDate)}
 				<option value={timeSlotTimeDate.substring(11, 16)}

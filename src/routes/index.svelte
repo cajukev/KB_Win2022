@@ -16,12 +16,9 @@
 
 <script>
 	import Timepicker from '../components/timepicker.svelte';
-import VideoContainer from '../components/videoContainer.svelte';
+	import VideoContainer from '../components/videoContainer.svelte';
 	export let timeslots;
-
-
 </script>
-
 <section
 	id="APropos"
 	class="
@@ -60,40 +57,50 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 		3xl:min-h-[30vh]"
 		>
 			<div class="p-4 2xl:pl-0 2xl:pr-16 3xl:py-6">
-				<p class="font-bold text-lg">Ce que je maîtrise 🎓</p>
-				<ul class="list-disc pl-7 mt-4">
-					<li>HTML / CSS / JS</li>
-					<li>React / Vue / <b>Svelte</b></li>
-					<li>SCSS / Tailwind</li>
-					<li>APIs : Firestore / FaunaDB</li>
-					<li><b>Performance Lighthouse 4x100</b></li>
-					<li>Développement <b>"serverless"</b></li>
-					<li>Développement <b>"responsive"</b></li>
-				</ul>
+				<div>
+					<p class="font-bold text-lg">Ce que je maîtrise 🎓</p>
+					<ul class="list-disc pl-7 mt-4">
+						<li>HTML / CSS / JS</li>
+						<li>React / Vue / <b>Svelte</b></li>
+						<li>SCSS / Tailwind</li>
+						<li>APIs : Firestore / FaunaDB</li>
+						<li><b>Performance Lighthouse 4x100</b></li>
+						<li>Développement <b>"serverless"</b></li>
+						<li>Développement <b>"responsive"</b></li>
+					</ul>
+				</div>
 			</div>
 			<div class="p-4 2xl:pl-0 2xl:pr-16 3xl:py-6">
-				<p class="font-bold text-lg">Ce que je maîtrise 🎓</p>
-				<ul class="list-disc pl-7 mt-4">
-					<li>HTML / CSS / JS</li>
-					<li>React / Vue / <b>Svelte</b></li>
-					<li>SCSS / Tailwind</li>
-					<li>APIs : Firestore / FaunaDB</li>
-					<li><b>Performance Lighthouse 4x100</b></li>
-					<li>Développement <b>"serverless"</b></li>
-					<li>Développement <b>"responsive"</b></li>
-				</ul>
+				<div>
+					<p class="font-bold text-lg">Ce que je connais bien ✔️</p>
+					<ul class="list-disc pl-7 mt-4">
+						<li>Accessibilité</li>
+						<li>SEO</li>
+						<li>UI / UX</li>
+						<li>Hébergement de domaine</li>
+						<li>Présentations techniques</li>
+						<li>Git</li>
+						<span class="text-slate-50 hidden 2xl:block">
+							<li />
+						</span>
+					</ul>
+				</div>
 			</div>
 			<div class="p-4 2xl:pl-0 3xl:py-6">
-				<p class="font-bold text-lg">Ce que je maîtrise 🎓</p>
-				<ul class="list-disc pl-7 mt-4">
-					<li>HTML / CSS / JS</li>
-					<li>React / Vue / <b>Svelte</b></li>
-					<li>SCSS / Tailwind</li>
-					<li>APIs : Firestore / FaunaDB</li>
-					<li><b>Performance Lighthouse 4x100</b></li>
-					<li>Développement <b>"serverless"</b></li>
-					<li>Développement <b>"responsive"</b></li>
-				</ul>
+				<div class="h-full">
+					<p class="font-bold text-lg">Ce que je veux apprendre 📖</p>
+					<ul class="list-disc pl-7 mt-4">
+						<li>Présentations non-techniques</li>
+						<li>Travail efficace Sprint / Scrum</li>
+						<li>eCommerce</li>
+						<span class="text-slate-50 hidden 2xl:block">
+							<li />
+							<li />
+							<li />
+							<li />
+						</span>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -118,7 +125,7 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 		xl:col-span-2
     2xl:col-span-1 2xl:text-left 2xl:px-0 2xl:max-w-[60%]"
 	>
-		Les possibilités sont <span>infinies</span>
+		À l'aide des <span>technologies modernes</span>, les possibilités sont <span>infinies</span>
 	</h1>
 	<div
 		class="mt-8 w-fit aspect-[7/9] shadow-md shadow-shadowColor
@@ -180,7 +187,7 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 		xl:col-span-2
     2xl:col-span-1 2xl:text-left 2xl:px-0 2xl:max-w-[60%]"
 	>
-		Laissez-moi vous offrir <span>de l'aide. </span>
+		Si je suis ce que vous <span>avez de besoin</span>, ou pour en savoir <span>d'avantage sur moi</span>...
 	</h1>
 	<div
 		class="mt-8 w-full aspect-[7/9] shadow-md shadow-shadowColor
@@ -191,7 +198,7 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 	</div>
 
 	<div class="relative xl:row-start-3 2xl:self-start">
-		<Timepicker timeslots={timeslots}></Timepicker>
+		<Timepicker {timeslots} />
 	</div>
 </section>
 
