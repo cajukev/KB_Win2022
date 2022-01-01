@@ -1,4 +1,6 @@
 <script>
+import { goto } from '$app/navigation';
+
 	import emailjs from 'emailjs-com';
 	export let timeslots;
 
@@ -23,39 +25,6 @@
 		dateMaxMonth = '0' + dateMaxMonth;
 	}
 	const max = dateMax.getFullYear() + '-' + dateMaxMonth + '-' + dateMaxDay;
-
-	let timeSlotTimes = [
-		'12:00',
-		'12:10',
-		'12:20',
-		'12:30',
-		'12:40',
-		'12:50',
-		'13:00',
-		'13:10',
-		'13:20',
-		'13:30',
-		'13:40',
-		'13:50',
-		'14:00',
-		'14:10',
-		'14:20',
-		'14:30',
-		'14:40',
-		'14:50',
-		'15:00',
-		'15:10',
-		'15:20',
-		'15:30',
-		'15:40',
-		'15:50',
-		'16:00',
-		'16:10',
-		'16:20',
-		'16:30',
-		'16:40',
-		'16:50'
-	];
 
 	let timeSlotTimeDates;
 
@@ -106,35 +75,35 @@
 
 	let timePicked;
 	let datePicked = date.getFullYear() + '-' + dateMonth + '-' + dateDay;
-	
+
 	$: console.log(datePicked);
 	let dateTime;
 	$: dateTime = dateDay + '/' + dateMonth + '/' + date.getFullYear() + '-' + timePicked;
 
 	const isTimeSlotTaken = (timeslot) => {
 		let flag = true;
-		let day = String(date.getDate())
+		let day = String(date.getDate());
 		if (day.length == 1) {
 			day = '0' + day;
 		}
-		let hour = String(date.getHours())
+		let hour = String(date.getHours());
 		if (hour.length == 1) {
 			hour = '0' + hour;
 		}
-		let minute = String(date.getMinutes())
+		let minute = String(date.getMinutes());
 		if (minute.length == 1) {
 			minute = '0' + minute;
 		}
-		console.log()
+		console.log();
 		timeslots.forEach((taken) => {
 			if (
-				taken.substring(11, 16) == timeslot.substring(11, 16) &&
-				taken.substring(0, 2) == timeslot.substring(8, 10) ||
-				parseInt(timeslot.substring(11,13)) < parseInt(hour) &&
-				day == timeslot.substring(8, 10) ||
-				parseInt(timeslot.substring(11,13)) == parseInt(hour) &&
-				parseInt(timeslot.substring(14,16)) < parseInt(minute) &&
-				day == timeslot.substring(8, 10)
+				(taken.substring(11, 16) == timeslot.substring(11, 16) &&
+					taken.substring(0, 2) == timeslot.substring(8, 10)) ||
+				(parseInt(timeslot.substring(11, 13)) < parseInt(hour) &&
+					day == timeslot.substring(8, 10)) ||
+				(parseInt(timeslot.substring(11, 13)) == parseInt(hour) &&
+					parseInt(timeslot.substring(14, 16)) < parseInt(minute) &&
+					day == timeslot.substring(8, 10))
 			) {
 				flag = false;
 			}
@@ -148,21 +117,35 @@
 	let description;
 
 	const submit = async () => {
-		// Send email
-		emailjs.init("user_5M4eTkkJad5yzMdMBPJs4")
-			emailjs.send('service_liae9za', 'template_193jaog', {nom:nom,telephone:telephone,email:email,description:description, datetime:dateTime})
-			.then(status => {
-				console.log(status)
+		/*// Send email
+		emailjs.init('user_5M4eTkkJad5yzMdMBPJs4');
+		emailjs
+			.send('service_liae9za', 'template_193jaog', {
+				nom: nom,
+				telephone: telephone,
+				email: email,
+				description: description,
+				datetime: dateTime
 			})
-		// Post to 
+			.then((status) => {
+				console.log(status);
+			});*/
+		// Post to DB
 		const res = await fetch('/api/timeslots', {
 			method: 'POST',
-			body: JSON.stringify({ Date: dateTime, nom:nom, telephone:telephone, email:email, description:description, datetime:dateTime })
+			body: JSON.stringify({
+				Date: dateTime,
+				nom: nom,
+				telephone: telephone,
+				email: email,
+				description: description,
+				datetime: dateTime
+			})
 		})
 			.then((response) => response.json())
 			.then((json) => {
-				return json;
 
+				return json;
 			});
 			
 

@@ -50,7 +50,7 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 
 	<div class="relative xl:row-start-3 2xl:self-start">
 		<div
-			class="flex flex-wrap justify-center
+			class="flex flex-wrap 
 			xl:flex-col
 			2xl:justify-start 2xl:flex-row 2xl:min-h-[40vh] 2xl:items-center 2xl:after:absolute 2xl:after:w-full 2xl:after:h-full 2xl:after:bg-slate-50 
     2xl:after:scale-x-150 2xl:after:shadow-md 2xl:after:shadow-shadowColor 2xl:after:-z-10

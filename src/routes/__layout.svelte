@@ -6,7 +6,6 @@
 </script>
 
 <main class="sm:px-4">
-	<!-- <Toast message="Toast"></Toast> -->
 	<Header></Header>
 	<Nav></Nav>
 	<slot />

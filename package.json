@@ -38,6 +38,7 @@
     "form-data": "^4.0.0",
     "mailgun": "^0.5.0",
     "mongodb": "^4.2.2",
-    "nodemailer": "^6.7.2"
+    "nodemailer": "^6.7.2",
+    "svelte-local-storage-store": "^0.2.6"
   }
 }
