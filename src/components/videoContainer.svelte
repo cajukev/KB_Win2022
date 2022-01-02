@@ -8,9 +8,10 @@
 	let play = () => {
 		thumbnail.style.opacity = '0';
 		thumbnail.style.display = 'none';
+		video.play();
 		playOverlay.style.background = 'rgba(0,0,0,0)';
 		playButton.style.opacity = 0;
-		video.play();
+		
 	};
 	let pause = () => {
 		playOverlay.style.background = 'rgba(0,0,0,0.5)';

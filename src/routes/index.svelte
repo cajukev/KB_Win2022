@@ -17,14 +17,16 @@
 <script>
 	import Timepicker from '../components/timepicker.svelte';
 	import VideoContainer from '../components/videoContainer.svelte';
+	import Nav from "../components/nav.svelte";
 	export let timeslots;
 </script>
+<Nav></Nav>
 <section
 	id="APropos"
 	class="
-mt-8 bg-zinc-50 pt-4 shadow-lg shadow-shadowColor flex flex-col items-center 
+mt-8 bg-zinc-50 pt-4 shadow-lg shadow-shadowColor flex flex-col items-center pb-4
 xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
-2xl:justify-items-start 2xl:bg-transparent 2xl:shadow-none 2xl:grid 2xl:grid-cols-[60%,40%] 2xl:grid-rows-[repeat(3,auto)] "
+2xl:justify-items-start 2xl:pb-0 2xl:bg-transparent 2xl:shadow-none 2xl:grid 2xl:grid-cols-[60%,40%] 2xl:grid-rows-[repeat(3,auto)] "
 >
 	<p
 		class="text-center italic text-slate-700 text-[clamp(16px,1.8vw,32px)]
@@ -41,7 +43,7 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 		Je crée des sites web, de la <span>conception</span> au <span>développement</span>
 	</h1>
 	<div
-		class="mt-8 w-fit aspect-[7/9] shadow-md shadow-shadowColor
+		class="max-h-screen mt-8 w-fit aspect-[7/9] shadow-md shadow-shadowColor
 		xl:col-start-2 xl:self-center
   2xl:col-start-2 2xl:col-span-1 2xl:row-start-1 2xl:row-span-3 2xl:justify-self-end 2xl:mt-0 2xl:w-full"
 	>
@@ -50,7 +52,7 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 
 	<div class="relative xl:row-start-3 2xl:self-start">
 		<div
-			class="flex flex-wrap 
+			class="flex flex-wrap justify-center
 			xl:flex-col
 			2xl:justify-start 2xl:flex-row 2xl:min-h-[40vh] 2xl:items-center 2xl:after:absolute 2xl:after:w-full 2xl:after:h-full 2xl:after:bg-slate-50 
     2xl:after:scale-x-150 2xl:after:shadow-md 2xl:after:shadow-shadowColor 2xl:after:-z-10
@@ -128,7 +130,7 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 		À l'aide des <span>technologies modernes</span>, les possibilités sont <span>infinies</span>
 	</h1>
 	<div
-		class="mt-8 w-fit aspect-[7/9] shadow-md shadow-shadowColor
+		class="max-h-screen mt-8 w-fit aspect-[7/9] shadow-md shadow-shadowColor
 		xl:col-start-2 xl:self-center
   2xl:col-start-2 2xl:col-span-1 2xl:row-start-1 2xl:row-span-3 2xl:justify-self-end 2xl:mt-0 2xl:w-full"
 	>
@@ -143,26 +145,28 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
     2xl:after:scale-x-[2.25] 2xl:after:shadow-md 2xl:after:shadow-shadowColor 2xl:after:-z-10
 		3xl:min-h-[30vh]"
 		>
-			<div class="p-4 2xl:pl-0 2xl:pr-16 3xl:py-6">
-				<p class="font-bold text-lg">Un interface moderne</p>
+			<div class="p-4 
+			2xl:pl-0 2xl:pr-16 
+			3xl:py-6">
+				<p class="font-bold text-lg text-center 2xl:text-left">Un interface moderne</p>
 				<a target="_blank" href="https://al001.netlify.app/">
-					<img src="site1.jpg" alt="" class="w-40 h-20 bg-slate-500" />
+					<img src="/sites/Site1-400.jpg" alt="" class="mt-4 w-52 h-52 bg-slate-500 shadow-md shadow-shadowColor" />
 				</a>
-				<p class="italic text-slate-600">Projet de bénévolat</p>
+				<p class="italic text-slate-600 mt-4 text-center 2xl:text-left">Projet de bénévolat</p>
 			</div>
 			<div class="p-4 2xl:pl-0 2xl:pr-16 3xl:py-6">
-				<p class="font-bold text-lg">Un API et les données</p>
+				<p class="font-bold text-lg text-center 2xl:text-left">Un API et les données</p>
 				<a target="_blank" href="https://concordiaga.netlify.app//">
-					<img src="site1.jpg" alt="" class="w-40 h-20 bg-slate-500" />
+					<img src="/sites/Site2-400.jpg" alt="" class="mt-4 w-52 h-52 bg-slate-500 shadow-md shadow-shadowColor" />
 				</a>
-				<p class="italic text-slate-600">Cours d'Université</p>
+				<p class="italic text-slate-600 mt-4 text-center 2xl:text-left">Cours d'Université</p>
 			</div>
 			<div class="p-4 2xl:pl-0 3xl:py-6">
-				<p class="font-bold text-lg">De la créativité</p>
+				<p class="font-bold text-lg text-center 2xl:text-left">De la créativité</p>
 				<a target="_blank" href="https://ggjsnafu.netlify.app/">
-					<img src="site1.jpg" alt="" class="w-40 h-20 bg-slate-500" />
+					<img src="/sites/Site3-400.jpg" alt="" class="mt-4 w-52 h-52 bg-slate-500 shadow-md shadow-shadowColor" />
 				</a>
-				<p class="italic text-slate-600">Game Jam</p>
+				<p class="italic text-slate-600 mt-4 text-center 2xl:text-left">Game Jam</p>
 			</div>
 		</div>
 	</div>
@@ -190,7 +194,7 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 		Si je suis ce que vous <span>avez de besoin</span>, ou pour en savoir <span>d'avantage sur moi</span>...
 	</h1>
 	<div
-		class="mt-8 w-full aspect-[7/9] shadow-md shadow-shadowColor
+		class="max-h-screen mt-8 w-full aspect-[7/9] shadow-md shadow-shadowColor
 		xl:col-start-2 xl:self-center
   2xl:col-start-2 2xl:col-span-1 2xl:row-start-1 2xl:row-span-3 2xl:justify-self-end 2xl:mt-0 2xl:w-full"
 	>
@@ -203,7 +207,5 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 </section>
 
 <style lang="postcss">
-	.section-splash span {
-		@apply font-semibold text-brandBlue;
-	}
+	
 </style>

@@ -117,7 +117,7 @@ import { goto } from '$app/navigation';
 	let description;
 
 	const submit = async () => {
-		/*// Send email
+		// Send email
 		emailjs.init('user_5M4eTkkJad5yzMdMBPJs4');
 		emailjs
 			.send('service_liae9za', 'template_193jaog', {
@@ -129,9 +129,9 @@ import { goto } from '$app/navigation';
 			})
 			.then((status) => {
 				console.log(status);
-			});*/
+			});
 		// Post to DB
-		const res = await fetch('/api/timeslots', {
+		const res = await fetch('/api/envoyer', {
 			method: 'POST',
 			body: JSON.stringify({
 				Date: dateTime,
@@ -144,15 +144,15 @@ import { goto } from '$app/navigation';
 		})
 			.then((response) => response.json())
 			.then((json) => {
-
+				goto('/succes')
 				return json;
 			});
-			
 
 	};
 </script>
-
-<p>Entrons en contact! 👋</p>
+<div class="bg-slate-50  p-4 shadow-lg shadow-color
+2xl:bg-zinc-50">
+	<p class="mb-4"><b>Entrons en contact! 👋</b></p>
 <form class="flex flex-col">
 	<label for="date">Choisir une date</label>
 	<input type="date" name="date" bind:value={datePicked} {min} {max} />
@@ -174,5 +174,7 @@ import { goto } from '$app/navigation';
 	<input bind:value={email} type="text" name="email" />
 	<label for="description">Description</label>
 	<input bind:value={description} type="text" name="description" />
-	<button on:click={submit}>Submit</button>
-</form>
+	
+</form><button on:click={submit}>Submit</button>
+
+</div>
