@@ -201,7 +201,9 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 		<VideoContainer num={'1'} />
 	</div>
 
-	<div class="relative xl:row-start-3 2xl:self-start">
+	<div class="relative p-4
+	xl:row-start-3 
+	2xl:self-start 2xl:p-0 2xl:mt-8">
 		<Timepicker {timeslots} />
 	</div>
 </section>

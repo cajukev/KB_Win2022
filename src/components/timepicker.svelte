@@ -1,19 +1,19 @@
 <script>
-import { goto } from '$app/navigation';
-
+	import { goto } from '$app/navigation';
 	import emailjs from 'emailjs-com';
+	import { date } from '../store';
 	export let timeslots;
 
-	const date = new Date();
-	let dateDay = date.getDate().toString();
+	const dateNow = new Date();
+	let dateDay = dateNow.getDate().toString();
 	if (dateDay.length == 1) {
 		dateDay = '0' + dateDay;
 	}
-	let dateMonth = (date.getMonth() + 1).toString();
+	let dateMonth = (dateNow.getMonth() + 1).toString();
 	if (dateMonth.length == 1) {
 		dateMonth = '0' + dateMonth;
 	}
-	const min = date.getFullYear() + '-' + dateMonth + '-' + dateDay;
+	const min = dateNow.getFullYear() + '-' + dateMonth + '-' + dateDay;
 
 	const dateMax = new Date(Date.now() + 6.048e8 * 2);
 	let dateMaxDay = dateMax.getDate().toString();
@@ -74,23 +74,23 @@ import { goto } from '$app/navigation';
 	];
 
 	let timePicked;
-	let datePicked = date.getFullYear() + '-' + dateMonth + '-' + dateDay;
+	let datePicked = dateNow.getFullYear() + '-' + dateMonth + '-' + dateDay;
 
 	$: console.log(datePicked);
 	let dateTime;
-	$: dateTime = dateDay + '/' + dateMonth + '/' + date.getFullYear() + '-' + timePicked;
+	$: dateTime = dateDay + '/' + dateMonth + '/' + dateNow.getFullYear() + '-' + timePicked;
 
 	const isTimeSlotTaken = (timeslot) => {
 		let flag = true;
-		let day = String(date.getDate());
+		let day = String(dateNow.getDate());
 		if (day.length == 1) {
 			day = '0' + day;
 		}
-		let hour = String(date.getHours());
+		let hour = String(dateNow.getHours());
 		if (hour.length == 1) {
 			hour = '0' + hour;
 		}
-		let minute = String(date.getMinutes());
+		let minute = String(dateNow.getMinutes());
 		if (minute.length == 1) {
 			minute = '0' + minute;
 		}
@@ -117,6 +117,7 @@ import { goto } from '$app/navigation';
 	let description;
 
 	const submit = async () => {
+		
 		// Send email
 		emailjs.init('user_5M4eTkkJad5yzMdMBPJs4');
 		emailjs
@@ -144,37 +145,41 @@ import { goto } from '$app/navigation';
 		})
 			.then((response) => response.json())
 			.then((json) => {
-				goto('/succes')
+				goto('/succes');
 				return json;
 			});
-
+		date.set({date:dateTime})
 	};
-</script>
-<div class="bg-slate-50  p-4 shadow-lg shadow-color
-2xl:bg-zinc-50">
-	<p class="mb-4"><b>Entrons en contact! 👋</b></p>
-<form class="flex flex-col">
-	<label for="date">Choisir une date</label>
-	<input type="date" name="date" bind:value={datePicked} {min} {max} />
-	<label for="time">Choisir un temps</label>
-	<select bind:value={timePicked} name="time" id="" title="Pick a time">
-		{#each timeSlotTimeDates as timeSlotTimeDate}
-			{#if isTimeSlotTaken(timeSlotTimeDate)}
-				<option value={timeSlotTimeDate.substring(11, 16)}
-					>{timeSlotTimeDate.substring(11, 16)}</option
-				>
-			{/if}
-		{/each}
-	</select>
-	<label for="nom">Nom complet</label>
-	<input bind:value={nom} type="text" name="nom" />
-	<label for="telephone">Téléphone</label>
-	<input bind:value={telephone} type="text" name="telephone" />
-	<label for="email">Email</label>
-	<input bind:value={email} type="text" name="email" />
-	<label for="description">Description</label>
-	<input bind:value={description} type="text" name="description" />
 	
-</form><button on:click={submit}>Submit</button>
+</script>
 
+<div
+	class=" p-4 shadow-lg shadow-color bg-white
+xl:mt-0
+2xl:bg-slate-50"
+>
+	<p class="mb-4"><b>Entrons en contact! 👋</b></p>
+	<form class="flex flex-col">
+		<label for="date">Choisir une date</label>
+		<input type="date" name="date" bind:value={datePicked} {min} {max} />
+		<label for="time">Choisir un temps</label>
+		<select bind:value={timePicked} name="time" id="" title="Pick a time">
+			{#each timeSlotTimeDates as timeSlotTimeDate}
+				{#if isTimeSlotTaken(timeSlotTimeDate)}
+					<option value={timeSlotTimeDate.substring(11, 16)}
+						>{timeSlotTimeDate.substring(11, 16)}</option
+					>
+				{/if}
+			{/each}
+		</select>
+		<label for="nom">Nom complet</label>
+		<input bind:value={nom} type="text" name="nom" />
+		<label for="telephone">Téléphone</label>
+		<input bind:value={telephone} type="text" name="telephone" />
+		<label for="email">Email</label>
+		<input bind:value={email} type="text" name="email" />
+		<label for="description">Description</label>
+		<textarea bind:value={description} type="text" name="description" class="h-16 resize-none" />
+		<button type="button" on:click={submit} class="hover:bg-slate-100">Envoyer</button>
+	</form>
 </div>

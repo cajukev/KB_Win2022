@@ -17,7 +17,7 @@
 		@apply font-semibold text-brandBlue;
 	}
 
-  input, select{
+  input, select, textarea{
     @apply border-2 mb-2;
   }
   form button{
