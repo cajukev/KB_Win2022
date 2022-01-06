@@ -117,15 +117,15 @@
 	let description;
 
 	const submit = async () => {
-		
-		// Send email
+		if(verify()){
+			// Send email
 		emailjs.init('user_5M4eTkkJad5yzMdMBPJs4');
 		emailjs
 			.send('service_liae9za', 'template_193jaog', {
-				nom: nom,
-				telephone: telephone,
-				email: email,
-				description: description,
+				nom: nom.value,
+				telephone: telephone.value,
+				email: email.value,
+				description: description.value,
 				datetime: dateTime
 			})
 			.then((status) => {
@@ -136,10 +136,10 @@
 			method: 'POST',
 			body: JSON.stringify({
 				Date: dateTime,
-				nom: nom,
-				telephone: telephone,
-				email: email,
-				description: description,
+				nom: nom.value,
+				telephone: telephone.value,
+				email: email.value,
+				description: description.value,
 				datetime: dateTime
 			})
 		})
@@ -149,7 +149,25 @@
 				return json;
 			});
 		date.set({date:dateTime})
+		}
+		
+		
 	};
+
+	const verify = () => {
+		let flag = true
+		let fields = [nom,telephone,email,description];
+		fields.forEach(field => {
+			if(field.value == ''){
+				field.style.borderColor = 'red'
+			flag = false
+		}else{
+			field.style.borderColor = 'rgb(229 231 235)' //Tailwind value
+		}
+		});
+		
+		return flag;
+	}
 	
 </script>
 
@@ -173,13 +191,13 @@ xl:mt-0
 			{/each}
 		</select>
 		<label for="nom">Nom complet</label>
-		<input bind:value={nom} type="text" name="nom" />
+		<input bind:this={nom} type="text" name="nom" />
 		<label for="telephone">Téléphone</label>
-		<input bind:value={telephone} type="text" name="telephone" />
+		<input bind:this={telephone} type="text" name="telephone" />
 		<label for="email">Email</label>
-		<input bind:value={email} type="text" name="email" />
+		<input bind:this={email} type="text" name="email" />
 		<label for="description">Description</label>
-		<textarea bind:value={description} type="text" name="description" class="h-16 resize-none" />
+		<textarea bind:this={description} type="text" name="description" class="h-16 resize-none" />
 		<button type="button" on:click={submit} class="hover:bg-slate-100">Envoyer</button>
 	</form>
 </div>

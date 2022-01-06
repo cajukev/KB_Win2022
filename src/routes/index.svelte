@@ -175,7 +175,7 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 <section
 	id="Contacter"
 	class="
-mt-8 bg-zinc-50 pt-4 shadow-lg shadow-shadowColor flex flex-col items-center 
+mt-8 bg-zinc-50 py-4 shadow-lg shadow-shadowColor flex flex-col items-center 
 xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 2xl:justify-items-start 2xl:bg-transparent 2xl:shadow-none 2xl:grid 2xl:grid-cols-[60%,40%] 2xl:grid-rows-[repeat(3,auto)] "
 >
