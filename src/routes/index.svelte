@@ -134,14 +134,14 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 		xl:col-start-2 xl:self-center
   2xl:col-start-2 2xl:col-span-1 2xl:row-start-1 2xl:row-span-3 2xl:justify-self-end 2xl:mt-0 2xl:w-full"
 	>
-		<VideoContainer num={'1'} />
+		<VideoContainer num={'2'} />
 	</div>
 
 	<div class="relative xl:row-start-3 2xl:self-start">
 		<div
 			class="flex flex-wrap justify-center
 			xl:flex-col
-			2xl:justify-start 2xl:flex-row 2xl:min-h-[40vh] 2xl:items-center 2xl:after:absolute 2xl:after:w-full 2xl:after:h-full 2xl:after:bg-slate-50 
+			2xl:justify-start 2xl:flex-row 2xl:content-center 2xl:min-h-[40vh] 2xl:items-center 2xl:after:absolute 2xl:after:w-full 2xl:after:h-full 2xl:after:bg-slate-50 
     2xl:after:scale-x-[2.25] 2xl:after:shadow-md 2xl:after:shadow-shadowColor 2xl:after:-z-10
 		3xl:min-h-[30vh]"
 		>
@@ -168,7 +168,12 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 				</a>
 				<p class="italic text-slate-600 mt-4 text-center 2xl:text-left">Game Jam</p>
 			</div>
+			<a href="https://github.com/cajukev" 
+			class="w-full font-bold underline underline-offset-2 text-center py-4 
+			2xl:text-left"
+			>Mon Github</a>
 		</div>
+		
 	</div>
 </section>
 
@@ -198,7 +203,7 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 		xl:col-start-2 xl:self-center
   2xl:col-start-2 2xl:col-span-1 2xl:row-start-1 2xl:row-span-3 2xl:justify-self-end 2xl:mt-0 2xl:w-full"
 	>
-		<VideoContainer num={'1'} />
+		<VideoContainer num={'3'} />
 	</div>
 
 	<div class="relative p-4

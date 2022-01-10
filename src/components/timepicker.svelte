@@ -102,7 +102,7 @@
 				(parseInt(timeslot.substring(11, 13)) < parseInt(hour) &&
 					day == timeslot.substring(8, 10)) ||
 				(parseInt(timeslot.substring(11, 13)) == parseInt(hour) &&
-					parseInt(timeslot.substring(14, 16)) < parseInt(minute) &&
+					parseInt(timeslot.substring(14, 16)) < parseInt(minute)+5 &&
 					day == timeslot.substring(8, 10))
 			) {
 				flag = false;
