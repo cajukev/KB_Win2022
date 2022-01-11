@@ -93,8 +93,8 @@
 
 	let timePicked;
 	let datePicked = dateNow.getFullYear() + '-' + dateMonth + '-' + dateDay;
-
-	$: console.log(datePicked);
+	$: dateDay = datePicked.substring(8,10)
+	$: dateMonth = datePicked.substring(5,7)
 	let dateTime;
 	$: dateTime = dateDay + '/' + dateMonth + '/' + dateNow.getFullYear() + '-' + timePicked;
 
@@ -163,10 +163,11 @@
 		})
 			.then((response) => response.json())
 			.then((json) => {
+				date.set({date:dateTime})
 				goto('/succes');
 				return json;
 			});
-		date.set({date:dateTime})
+		
 		}
 		
 		
