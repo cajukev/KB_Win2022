@@ -179,9 +179,9 @@ xl:mt-0
 	<p class="mb-4"><b>Entrons en contact! 👋</b></p>
 	<form class="flex flex-col">
 		<label for="date">Choisir une date</label>
-		<input type="date" name="date" bind:value={datePicked} {min} {max} />
+		<input type="date" name="date" id="date" bind:value={datePicked} {min} {max} />
 		<label for="time">Choisir un temps</label>
-		<select bind:value={timePicked} name="time" id="" title="Pick a time">
+		<select bind:value={timePicked} name="time" id="time" title="Pick a time">
 			{#each timeSlotTimeDates as timeSlotTimeDate}
 				{#if isTimeSlotTaken(timeSlotTimeDate)}
 					<option value={timeSlotTimeDate.substring(11, 16)}
@@ -191,13 +191,13 @@ xl:mt-0
 			{/each}
 		</select>
 		<label for="nom">Nom complet</label>
-		<input bind:this={nom} type="text" name="nom" />
+		<input bind:this={nom} type="text" name="nom" id="nom" />
 		<label for="telephone">Téléphone</label>
-		<input bind:this={telephone} type="text" name="telephone" />
+		<input bind:this={telephone} type="text" name="telephone" id="telephone" />
 		<label for="email">Email</label>
-		<input bind:this={email} type="text" name="email" />
+		<input bind:this={email} type="text" name="email" id="email" />
 		<label for="description">Description</label>
-		<textarea bind:this={description} type="text" name="description" class="h-16 resize-none" />
+		<textarea bind:this={description} type="text" name="description" id="description" class="h-16 resize-none" />
 		<button type="button" on:click={submit} class="hover:bg-slate-100">Envoyer</button>
 	</form>
 </div>

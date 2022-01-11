@@ -19,6 +19,10 @@
 
 </script>
 
+<svelte:head>
+	<title>Portfolio de Kevin Brousseau - Page de succès</title>
+</svelte:head>
+
 <section
 	id="Succes"
 	class="

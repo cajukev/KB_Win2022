@@ -20,6 +20,12 @@
 	import Nav from "../components/nav.svelte";
 	export let timeslots;
 </script>
+
+<svelte:head>
+	<title>Portfolio de Kevin Brousseau</title>
+	<meta name="description" content="Voici le site web que j'ai créé dans le but de trouver un emploi dans le domaine du développement web." />
+</svelte:head>
+
 <Nav></Nav>
 <section
 	id="APropos"
@@ -149,22 +155,22 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 			2xl:pl-0 2xl:pr-16 
 			3xl:py-6">
 				<p class="font-bold text-lg text-center 2xl:text-left">Un interface moderne</p>
-				<a target="_blank" href="https://al001.netlify.app/">
-					<img src="/sites/Site1-400.jpg" alt="" class="mt-4 w-52 h-52 bg-slate-500 shadow-md shadow-shadowColor" />
+				<a target="_blank" href="https://al001.netlify.app/" rel="noreferrer">
+					<img src="/sites/Site1-400.jpg" alt="Site Kiosque Armoires Lavallée" class="mt-4 w-52 h-52 bg-slate-500 shadow-md shadow-shadowColor" />
 				</a>
 				<p class="italic text-slate-600 mt-4 text-center 2xl:text-left">Projet de bénévolat</p>
 			</div>
 			<div class="p-4 2xl:pl-0 2xl:pr-16 3xl:py-6">
 				<p class="font-bold text-lg text-center 2xl:text-left">Un API et les données</p>
-				<a target="_blank" href="https://concordiaga.netlify.app//">
-					<img src="/sites/Site2-400.jpg" alt="" class="mt-4 w-52 h-52 bg-slate-500 shadow-md shadow-shadowColor" />
+				<a target="_blank" href="https://concordiaga.netlify.app//" rel="noreferrer">
+					<img src="/sites/Site2-400.jpg" alt="Site de Supermarché" class="mt-4 w-52 h-52 bg-slate-500 shadow-md shadow-shadowColor" />
 				</a>
 				<p class="italic text-slate-600 mt-4 text-center 2xl:text-left">Cours d'Université</p>
 			</div>
 			<div class="p-4 2xl:pl-0 3xl:py-6">
 				<p class="font-bold text-lg text-center 2xl:text-left">De la créativité</p>
-				<a target="_blank" href="https://ggjsnafu.netlify.app/">
-					<img src="/sites/Site3-400.jpg" alt="" class="mt-4 w-52 h-52 bg-slate-500 shadow-md shadow-shadowColor" />
+				<a target="_blank" href="https://ggjsnafu.netlify.app/" rel="noreferrer">
+					<img src="/sites/Site3-400.jpg" alt="Site d'un jeu" class="mt-4 w-52 h-52 bg-slate-500 shadow-md shadow-shadowColor" />
 				</a>
 				<p class="italic text-slate-600 mt-4 text-center 2xl:text-left">Game Jam</p>
 			</div>
