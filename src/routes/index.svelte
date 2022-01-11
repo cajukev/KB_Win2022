@@ -23,7 +23,7 @@
 
 <svelte:head>
 	<title>Portfolio de Kevin Brousseau</title>
-	<meta name="description" content="Voici le site web que j'ai créé dans le but de trouver un emploi dans le domaine du développement web." />
+	<meta name="description" content="Voici le site web que j'ai créé dans le but de trouver un emploi dans le domaine du développement web.">
 </svelte:head>
 
 <Nav></Nav>
