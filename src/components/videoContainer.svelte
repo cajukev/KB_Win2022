@@ -76,13 +76,13 @@ let playFocus = () => {
 		/>
 		<source srcset="thumbnails/thumbnail{num}-700.webp , thumbnails/thumbnail{num}-800.webp 2x" type="image/webp" />
 		<source srcset="thumbnails/thumbnail{num}-700.jpg, thumbnails/thumbnail{num}-800.jpg 2x" type="image/jpeg" />
-		<img src="thumbnails/thumbnail{num}-800.jpg" class="w-full aspect-[7/9]"/>
+		<img src="thumbnails/thumbnail{num}-800.jpg" alt={"Thumbnail pour video "+num} class="w-full aspect-[7/9]"/>
 	</picture>
 	<div bind:this={playOverlay} on:click={swap}  class="row-start-1 row-span-1 col-start-1 col-span-1 grid bg-[rgba(0,0,0,0.5)] w-full h-full z-30  cursor-pointer transition-opacity">
 		<button
 			bind:this={playButton}
 			on:focus={playFocus}
-			name={"play video "+num}
+			aria-label={"play video "+num}
 			class="w-1/3 place-self-center rounded-full transform transition-[transform,opacity] focus:scale-110 hover:scale-110 "
 		>
 			<svg
