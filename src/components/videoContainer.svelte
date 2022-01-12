@@ -37,7 +37,6 @@ let playFocus = () => {
 		on:pause={pause}
 		tabindex="-1"
 		src="video{num}.mp4"
-		preload="auto"
 		class="row-start-1 row-span-1 col-start-1 col-span-1 w-full z-0"
 	/>
 	<picture
