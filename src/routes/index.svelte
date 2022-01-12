@@ -58,7 +58,8 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 
 	<div class="relative xl:row-start-3 2xl:self-start">
 		<div
-			class="flex flex-wrap justify-center
+			class="
+			flex flex-wrap justify-center
 			xl:flex-col
 			2xl:justify-start 2xl:flex-row 2xl:min-h-[40vh] 2xl:items-center 2xl:after:absolute 2xl:after:w-full 2xl:after:h-full 2xl:after:bg-slate-50 
     2xl:after:scale-x-150 2xl:after:shadow-md 2xl:after:shadow-shadowColor 2xl:after:-z-10
@@ -66,7 +67,7 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 		>
 			<div class="p-4 2xl:pl-0 2xl:pr-16 3xl:py-6">
 				<div>
-					<p class="font-bold text-lg">Ce que je maîtrise 🎓</p>
+					<p class="font-bold text-lg text-center xl:text-left">Ce que je maîtrise 🎓</p>
 					<ul class="list-disc pl-7 mt-4">
 						<li>HTML / CSS / JS</li>
 						<li>React / Vue / <b>Svelte</b></li>
@@ -80,7 +81,7 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 			</div>
 			<div class="p-4 2xl:pl-0 2xl:pr-16 3xl:py-6">
 				<div>
-					<p class="font-bold text-lg">Ce que je connais bien ✔️</p>
+					<p class="font-bold text-lg text-center xl:text-left">Ce que je connais bien ✔️</p>
 					<ul class="list-disc pl-7 mt-4">
 						<li>Accessibilité</li>
 						<li>SEO</li>
@@ -96,7 +97,7 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 			</div>
 			<div class="p-4 2xl:pl-0 3xl:py-6">
 				<div class="h-full">
-					<p class="font-bold text-lg">Ce que je veux apprendre 📖</p>
+					<p class="font-bold text-lg text-center xl:text-left">Ce que je veux apprendre 📖</p>
 					<ul class="list-disc pl-7 mt-4">
 						<li>Présentations non-techniques</li>
 						<li>Travail efficace Sprint / Scrum</li>
