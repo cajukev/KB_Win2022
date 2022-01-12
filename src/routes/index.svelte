@@ -156,21 +156,34 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 			3xl:py-6">
 				<p class="font-bold text-lg text-center 2xl:text-left">Un interface moderne</p>
 				<a target="_blank" href="https://al001.netlify.app/" rel="noreferrer">
-					<img src="/sites/Site1-400.jpg" alt="Site Kiosque Armoires Lavallée" class="mt-4 w-52 h-52 bg-slate-500 shadow-md shadow-shadowColor" />
+					<picture>
+						<source srcset="/sites/Site1-400.webp , /sites/Site1-800.webp 2x" type="image/webp" />
+						<source srcset="/sites/Site1-400.jpg , /sites/Site1-800.jpg 2x" type="image/jpeg" />
+						<img src="/sites/Site1-400.jpg" alt="Site d'un jeu" class="mt-4 w-52 h-52 bg-slate-500 shadow-md shadow-shadowColor" />
+					</picture>
 				</a>
 				<p class="italic text-slate-600 mt-4 text-center 2xl:text-left">Projet de bénévolat</p>
 			</div>
 			<div class="p-4 2xl:pl-0 2xl:pr-16 3xl:py-6">
 				<p class="font-bold text-lg text-center 2xl:text-left">Un API et les données</p>
 				<a target="_blank" href="https://concordiaga.netlify.app//" rel="noreferrer">
-					<img src="/sites/Site2-400.jpg" alt="Site de Supermarché" class="mt-4 w-52 h-52 bg-slate-500 shadow-md shadow-shadowColor" />
+					<picture>
+						<source srcset="/sites/Site2-400.webp , /sites/Site2-800.webp 2x" type="image/webp" />
+						<source srcset="/sites/Site2-400.jpg , /sites/Site2-800.jpg 2x" type="image/jpeg" />
+						<img src="/sites/Site2-400.jpg" alt="Site d'un jeu" class="mt-4 w-52 h-52 bg-slate-500 shadow-md shadow-shadowColor" />
+					</picture>
 				</a>
 				<p class="italic text-slate-600 mt-4 text-center 2xl:text-left">Cours d'Université</p>
 			</div>
 			<div class="p-4 2xl:pl-0 3xl:py-6">
 				<p class="font-bold text-lg text-center 2xl:text-left">De la créativité</p>
 				<a target="_blank" href="https://ggjsnafu.netlify.app/" rel="noreferrer">
-					<img src="/sites/Site3-400.jpg" alt="Site d'un jeu" class="mt-4 w-52 h-52 bg-slate-500 shadow-md shadow-shadowColor" />
+					<picture>
+						<source srcset="/sites/Site3-400.webp , /sites/Site3-800.webp 2x" type="image/webp" />
+						<source srcset="/sites/Site3-400.jpg , /sites/Site3-800.jpg 2x" type="image/jpeg" />
+						<img src="/sites/Site3-400.jpg" alt="Site d'un jeu" class="mt-4 w-52 h-52 bg-slate-500 shadow-md shadow-shadowColor" />
+					</picture>
+					
 				</a>
 				<p class="italic text-slate-600 mt-4 text-center 2xl:text-left">Game Jam</p>
 			</div>
