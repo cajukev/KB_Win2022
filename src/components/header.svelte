@@ -1,3 +1,6 @@
+<script>
+	export let lang;
+</script>
 <header
 	class="flex flex-col sm:grid sm:grid-rows-1 sm:grid-cols-[1fr,2fr] sm:pt-4 my sm:mt-[clamp(16px,3vw,64px)] "
 >
@@ -34,13 +37,13 @@
 			class="font-semibold text-slate-600 self-center text-[clamp(16px,1.8vw,32px)] 
     sm:px-[1.5em]"
 		>
-			Bachelier en Sciences Informatiques<span class="text-slate-400">*</span>
+			{lang=="fr"?"Bachelier en Sciences Informatiques":"Bachelor of ComputerScience"}<span class="text-slate-400">*</span>
 		</p>
 		<p
 			class="italic text-slate-600 self-start text-[clamp(16px,1.8vw,32px)] leading-tight 
     sm:leading-none sm:px-[1.5em]"
 		>
-			Expert en sites web à la recherche d'un poste à temps plein.
+		{lang=="fr"?"Expert en sites web à la recherche d'un poste à temps plein.":"Expert web developer looking for a full-time job."}<span class="text-slate-400">*</span>
 		</p>
 	</div>
 </header>

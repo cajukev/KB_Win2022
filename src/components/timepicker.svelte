@@ -3,6 +3,7 @@
 	import emailjs from 'emailjs-com';
 	import { date } from '../store';
 	export let timeslots;
+	export let lang;
 
 	const dateNow = new Date();
 	let dateDay = dateNow.getDate().toString();
@@ -189,17 +190,16 @@
 	}
 	
 </script>
-
 <div
 	class=" p-4 shadow-lg shadow-color bg-white
 xl:mt-0
 2xl:bg-slate-50"
 >
-	<p class="mb-4"><b>Entrons en contact! 👋</b></p>
+	<p class="mb-4"><b>{lang=="fr"?"Entrons en contact!":"Let's get in contact"} 👋</b></p>
 	<form class="flex flex-col">
-		<label for="date">Choisir une date</label>
+		<label for="date">{lang=="fr"?"Choisir une date!":"Chose a date!"}</label>
 		<input type="date" name="date" id="date" bind:value={datePicked} {min} {max} />
-		<label for="time">Choisir un temps</label>
+		<label for="time">{lang=="fr"?"Choisir un temps!":"Chose a time"}</label>
 		<select bind:value={timePicked} name="time" id="time" title="Pick a time">
 			{#each timeSlotTimeDates as timeSlotTimeDate}
 				{#if isTimeSlotTaken(timeSlotTimeDate)}
@@ -209,9 +209,9 @@ xl:mt-0
 				{/if}
 			{/each}
 		</select>
-		<label for="nom">Nom complet</label>
+		<label for="nom">{lang=="fr"?"Nom complet":"Full name"}</label>
 		<input bind:this={nom} type="text" name="nom" id="nom" />
-		<label for="telephone">Téléphone</label>
+		<label for="telephone">{lang=="fr"?"Telephone":"Téléphone"}</label>
 		<input bind:this={telephone} type="text" name="telephone" id="telephone" />
 		<label for="email">Email</label>
 		<input bind:this={email} type="text" name="email" id="email" />

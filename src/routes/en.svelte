@@ -23,11 +23,10 @@
 </script>
 
 <svelte:head>
-	<title>Portfolio de Kevin Brousseau</title>
-	<meta name="description" content="Voici le site web que j'ai créé dans le but de trouver un emploi dans le domaine du développement web.">
+	<title>Kevin Brousseau's Portfolio</title>
+	<meta name="description" content="This is the website I created in order to start my career in web development.">
 </svelte:head>
-
-<Header lang='fr'></Header>
+<Header lang='en'></Header>
 <Nav></Nav>
 <section
 	id="APropos"
@@ -41,14 +40,14 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 		xl:col-span-2
     2xl:col-span-1 2xl:text-left 2xl:self-end"
 	>
-		A Propos
+		About me
 	</p>
 	<h1
 		class="section-splash mt-2 px-4  text-center text-[clamp(20px,2vw,32px)] 
 		xl:col-span-2
     2xl:col-span-1 2xl:text-left 2xl:px-0 2xl:max-w-[60%]"
 	>
-		Je crée des sites web, de la <span>conception</span> au <span>développement</span>
+		I create websites, from <span>conception</span> to <span>development</span>
 	</h1>
 	<div
 		class="max-h-screen mt-8 w-fit aspect-[7/9] shadow-md shadow-shadowColor
@@ -69,27 +68,27 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 		>
 			<div class="p-4 2xl:pl-0 2xl:pr-16 3xl:py-6">
 				<div>
-					<p class="font-bold text-lg text-center xl:text-left">Ce que je maîtrise 🎓</p>
+					<p class="font-bold text-lg text-center xl:text-left">What I master🎓</p>
 					<ul class="list-disc pl-7 mt-4">
 						<li>HTML / CSS / JS</li>
 						<li>React / Vue / <b>Svelte</b></li>
 						<li>SCSS / Tailwind</li>
 						<li>APIs : Firestore / FaunaDB</li>
-						<li><b>Performance Lighthouse 4x100</b></li>
-						<li>Développement <b>"serverless"</b></li>
-						<li>Développement <b>"responsive"</b></li>
+						<li><b>Lighthouse 4x100 Performance</b></li>
+						<li><b>"Serverless"</b>development</li>
+						<li><b>"Responsive"</b>development</li>
 					</ul>
 				</div>
 			</div>
 			<div class="p-4 2xl:pl-0 2xl:pr-16 3xl:py-6">
 				<div>
-					<p class="font-bold text-lg text-center xl:text-left">Ce que je connais bien ✔️</p>
+					<p class="font-bold text-lg text-center xl:text-left">What I know well ✔️</p>
 					<ul class="list-disc pl-7 mt-4">
-						<li>Accessibilité</li>
+						<li>Accessibility</li>
 						<li>SEO</li>
 						<li>UI / UX</li>
-						<li>Hébergement de domaine</li>
-						<li>Présentations techniques</li>
+						<li>Domain hosting</li>
+						<li>Technical presentations</li>
 						<li>Git</li>
 						<span class="text-slate-50 hidden 2xl:block">
 							<li />
@@ -99,10 +98,10 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 			</div>
 			<div class="p-4 2xl:pl-0 3xl:py-6">
 				<div class="h-full">
-					<p class="font-bold text-lg text-center xl:text-left">Ce que je veux apprendre 📖</p>
+					<p class="font-bold text-lg text-center xl:text-left">What I want to learn 📖</p>
 					<ul class="list-disc pl-7 mt-4">
-						<li>Présentations non-techniques</li>
-						<li>Travail efficace Sprint / Scrum</li>
+						<li>Meetings</li>
+						<li>Sprint / Scrum / Agile</li>
 						<li>eCommerce</li>
 						<span class="text-slate-50 hidden 2xl:block">
 							<li />
@@ -136,7 +135,7 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 		xl:col-span-2
     2xl:col-span-1 2xl:text-left 2xl:px-0 2xl:max-w-[60%]"
 	>
-		À l'aide des <span>technologies modernes</span>, les possibilités sont <span>infinies</span>
+		With the help of <span>modern technologies</span>, the possibilities are <span>endless.</span>
 	</h1>
 	<div
 		class="max-h-screen mt-8 w-fit aspect-[7/9] shadow-md shadow-shadowColor
@@ -157,7 +156,7 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 			<div class="p-4 
 			2xl:pl-0 2xl:pr-16 
 			3xl:py-6">
-				<p class="font-bold text-lg text-center 2xl:text-left">Un interface moderne</p>
+				<p class="font-bold text-lg text-center 2xl:text-left">A modern interface</p>
 				<a target="_blank" href="https://al001.netlify.app/" rel="noreferrer">
 					<picture>
 						<source srcset="/sites/Site1-400.webp" type="image/webp" />
@@ -165,10 +164,10 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 						<img src="/sites/Site1-400.jpg" alt="Site d'un jeu" class="mt-4 w-52 h-52 bg-slate-500 shadow-md shadow-shadowColor" />
 					</picture>
 				</a>
-				<p class="italic text-slate-600 mt-4 text-center 2xl:text-left">Projet de bénévolat</p>
+				<p class="italic text-slate-600 mt-4 text-center 2xl:text-left">Volunteer project</p>
 			</div>
 			<div class="p-4 2xl:pl-0 2xl:pr-16 3xl:py-6">
-				<p class="font-bold text-lg text-center 2xl:text-left">Un API et les données</p>
+				<p class="font-bold text-lg text-center 2xl:text-left">An API and some data</p>
 				<a target="_blank" href="https://concordiaga.netlify.app//" rel="noreferrer">
 					<picture>
 						<source srcset="/sites/Site2-400.webp" type="image/webp" />
@@ -176,10 +175,10 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 						<img src="/sites/Site2-400.jpg" alt="Site d'un jeu" class="mt-4 w-52 h-52 bg-slate-500 shadow-md shadow-shadowColor" />
 					</picture>
 				</a>
-				<p class="italic text-slate-600 mt-4 text-center 2xl:text-left">Cours d'Université</p>
+				<p class="italic text-slate-600 mt-4 text-center 2xl:text-left">University course</p>
 			</div>
 			<div class="p-4 2xl:pl-0 3xl:py-6">
-				<p class="font-bold text-lg text-center 2xl:text-left">De la créativité</p>
+				<p class="font-bold text-lg text-center 2xl:text-left">Some creativity</p>
 				<a target="_blank" href="https://ggjsnafu.netlify.app/" rel="noreferrer">
 					<picture>
 						<source srcset="/sites/Site3-400.webp" type="image/webp" />
@@ -193,7 +192,7 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 			<a href="https://github.com/cajukev" 
 			class="w-full font-bold underline underline-offset-2 text-center py-4 
 			2xl:text-left"
-			>Mon Github</a>
+			>My Github</a>
 		</div>
 		
 	</div>
@@ -211,14 +210,14 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 		xl:col-span-2
     2xl:col-span-1 2xl:text-left 2xl:self-end"
 	>
-		Contacter
+		Contact
 	</p>
 	<h1
 		class="section-splash mt-2 px-4  text-center text-[clamp(20px,2vw,32px)] 
 		xl:col-span-2
     2xl:col-span-1 2xl:text-left 2xl:px-0 2xl:max-w-[60%]"
 	>
-		Si je suis ce que vous <span>avez de besoin</span>, ou pour en savoir <span>d'avantage sur moi</span>...
+		If I'm what <span>you need</span> or to learn <span>more about me</span>...
 	</h1>
 	<div
 		class="max-h-screen mt-8 w-full aspect-[7/9] shadow-md shadow-shadowColor
@@ -231,7 +230,7 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 	<div class="relative p-4
 	xl:row-start-3 
 	2xl:self-start 2xl:p-0 2xl:mt-8">
-		<Timepicker lang={"fr"} {timeslots} />
+		<Timepicker lang={"en"} {timeslots} />
 	</div>
 </section>
 
