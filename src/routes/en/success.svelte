@@ -1,7 +1,7 @@
 <script>
-	import Timepicker from '../components/timepicker.svelte';
-	import VideoContainer from '../components/videoContainer.svelte';
-	import { date } from '../store';
+	import Timepicker from '../../components/timepicker.svelte';
+	import VideoContainer from '../../components/videoContainer.svelte';
+	import { date } from '../../store';
 	export let timeslots;
 
 	let dateString = $date.date
@@ -12,14 +12,14 @@
 
 	let dateTime = dateString.substring(11,16);
 
-	let mois = ['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre']
+	let mois = ['January','February','Mars','April','May','June','July','August','September','October','November','December']
 
 	
 
 </script>
 
 <svelte:head>
-	<title>Portfolio de Kevin Brousseau - Page de succès</title>
+	<title>Kevin Brousseau's Portfolio - Success page</title>
 </svelte:head>
 
 <section
@@ -35,7 +35,7 @@ xl:block
 		xl:col-span-2 
     2xl:col-span-1 2xl:text-left 2xl:px-0 2xl:max-w-[60%]"
 	>
-		<span>Félicitations!</span> Vous avez enregistré un rendez-vous.
+		<span>Congratulations!</span> You have created a meeting.
 	</h1>
 
 	<p
@@ -43,7 +43,7 @@ xl:block
 		xl:col-span-2 
     2xl:col-span-1 2xl:text-left 2xl:px-0 2xl:max-w-[60%]"
 	>
-		{dateDay + " " + mois[dateMth-1] + " "+ dateYr + " - "+ dateTime + (parseInt(dateTime)>11?" pm":' am')}
+		{mois[dateMth-1]  + " " + dateDay  + " "+ dateYr + " - "+ dateTime + (parseInt(dateTime)>11?" pm":' am')}
 </p>
 
 	<p
@@ -51,7 +51,7 @@ xl:block
 		xl:col-span-2 
     2xl:col-span-1 2xl:text-left 2xl:px-0 2xl:max-w-[60%]"
 	>
-		Attendez-vous à recevoir un appel (514-550-7051) ou un email (kevin.brousseau98@gmail.com).
+		Expect to receive a phone call (from 514-550-7051) or an email (from kevin.brousseau98@gmail.com).
 </p>
 
 

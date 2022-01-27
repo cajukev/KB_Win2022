@@ -37,7 +37,7 @@
 			class="font-semibold text-slate-600 self-center text-[clamp(16px,1.8vw,32px)] 
     sm:px-[1.5em]"
 		>
-			{lang=="fr"?"Bachelier en Sciences Informatiques":"Bachelor of ComputerScience"}<span class="text-slate-400">*</span>
+			{lang=="fr"?"Bachelier en Sciences Informatiques":"Bachelor of Computer Science"}<span class="text-slate-400">*</span>
 		</p>
 		<p
 			class="italic text-slate-600 self-start text-[clamp(16px,1.8vw,32px)] leading-tight 

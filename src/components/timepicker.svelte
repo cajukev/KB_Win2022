@@ -165,7 +165,7 @@
 			.then((response) => response.json())
 			.then((json) => {
 				date.set({date:dateTime})
-				goto('/succes');
+				goto(lang=="fr"?'/succes':'/en/success');
 				return json;
 			});
 		
@@ -211,12 +211,12 @@ xl:mt-0
 		</select>
 		<label for="nom">{lang=="fr"?"Nom complet":"Full name"}</label>
 		<input bind:this={nom} type="text" name="nom" id="nom" />
-		<label for="telephone">{lang=="fr"?"Telephone":"Téléphone"}</label>
+		<label for="telephone">{lang=="fr"?"Téléphone":"Telephone"}</label>
 		<input bind:this={telephone} type="text" name="telephone" id="telephone" />
 		<label for="email">Email</label>
 		<input bind:this={email} type="text" name="email" id="email" />
 		<label for="description">Description</label>
 		<textarea bind:this={description} type="text" name="description" id="description" class="h-16 resize-none" />
-		<button type="button" on:click={submit} class="hover:bg-slate-100">Envoyer</button>
+		<button type="button" on:click={submit} class="hover:bg-slate-100">{lang=="fr"?"Envoyer":"Send"}</button>
 	</form>
 </div>

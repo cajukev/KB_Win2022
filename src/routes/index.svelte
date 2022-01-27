@@ -17,8 +17,8 @@
 <script>
 	import Timepicker from '../components/timepicker.svelte';
 	import VideoContainer from '../components/videoContainer.svelte';
-	import Nav from "../components/nav.svelte";
 	import Header from "../components/header.svelte";
+	import Fluff from '../components/fluff.svelte'
 	export let timeslots;
 </script>
 
@@ -27,8 +27,24 @@
 	<meta name="description" content="Voici le site web que j'ai créé dans le but de trouver un emploi dans le domaine du développement web.">
 </svelte:head>
 
-<Header lang='fr'></Header>
-<Nav></Nav>
+<div id="fluffs -z-10">
+	<div class="fixed w-6/12 -z-10">
+		<Fluff/>
+	</div>
+</div>
+
+<nav class=" top-4 sm:top-8 flex justify-center gap-2 mt-4 sm:justify-start sm:mt-[clamp(1rem,3.5vw-6px,4rem)] z-50 text-sm sm:text-base">
+  <a href="#APropos" class="bg-zinc-50 py-2 pr-4 pl-5 rounded-l-full shadow-md shadow-shadowColor hover:bg-white">
+    À Propos
+  </a>
+  <a href="#Solutions" class="bg-zinc-50 py-2 px-4 shadow-md shadow-shadowColor hover:bg-white">
+    Solutions
+  </a>
+  <a href="#Contacter" class="font-medium bg-amber-500 py-2 pr-5 pl-4 rounded-r-full shadow-md shadow-shadowColor hover:bg-amber-400">
+    Contacter
+  </a>
+</nav>
+
 <section
 	id="APropos"
 	class="
