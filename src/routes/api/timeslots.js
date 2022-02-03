@@ -1,3 +1,6 @@
+/**
+ * Retireve timeslots from the database, return Dates
+ */
 import { MongoClient, ServerApiVersion } from 'mongodb';
 import { VITE_ADMIN_PW } from '../../lib/Env';
 export async function get() {

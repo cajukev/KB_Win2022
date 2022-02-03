@@ -1,4 +1,6 @@
-
+/**
+ * Insert timeslots into the database
+ */
 import { MongoClient, ServerApiVersion } from 'mongodb';
 import { VITE_ADMIN_PW } from '../../lib/Env';
 export async function post(request) {

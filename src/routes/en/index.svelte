@@ -18,6 +18,7 @@
 	import Timepicker from '../../components/timepicker.svelte';
 	import VideoContainer from '../../components/videoContainer.svelte';
 	import Header from "../../components/header.svelte";
+	import Fluff from '../../components/fluff.svelte'
 	export let timeslots;
 </script>
 
@@ -26,8 +27,10 @@
 	<meta name="description" content="This is the website I created in order to start my career in web development.">
 </svelte:head>
 
-<div id="fluff">
-	
+<div id="fluffs -z-10">
+	<div class="fixed w-6/12 -z-10">
+		<Fluff/>
+	</div>
 </div>
 
 <nav class=" top-4 sm:top-8 flex justify-center gap-2 mt-4 sm:justify-start sm:mt-[clamp(1rem,3.5vw-6px,4rem)] z-50 text-sm sm:text-base">
@@ -68,7 +71,7 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 		xl:col-start-2 xl:self-center
   2xl:col-start-2 2xl:col-span-1 2xl:row-start-1 2xl:row-span-3 2xl:justify-self-end 2xl:mt-0 2xl:w-full"
 	>
-		<VideoContainer num={'1'} />
+		<VideoContainer num={'1'} lang="en" />
 	</div>
 
 	<div class="relative xl:row-start-3 2xl:self-start">
@@ -156,7 +159,7 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 		xl:col-start-2 xl:self-center
   2xl:col-start-2 2xl:col-span-1 2xl:row-start-1 2xl:row-span-3 2xl:justify-self-end 2xl:mt-0 2xl:w-full"
 	>
-		<VideoContainer num={'2'} />
+		<VideoContainer num={'2'} lang="en" />
 	</div>
 
 	<div class="relative xl:row-start-3 2xl:self-start">
@@ -238,7 +241,7 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 		xl:col-start-2 xl:self-center
   2xl:col-start-2 2xl:col-span-1 2xl:row-start-1 2xl:row-span-3 2xl:justify-self-end 2xl:mt-0 2xl:w-full"
 	>
-		<VideoContainer num={'3'} />
+		<VideoContainer num={'3'} lang="en"/>
 	</div>
 
 	<div class="relative p-4

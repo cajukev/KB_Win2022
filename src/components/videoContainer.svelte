@@ -1,5 +1,6 @@
 <script>
 	export let num;
+	export let lang;
 
 	let video;
 	let thumbnail;
@@ -36,7 +37,7 @@ let playFocus = () => {
 		bind:this={video}
 		on:pause={pause}
 		tabindex="-1"
-		src="video{num}.mp4"
+		src="video{num}{lang=="en"?"_en":""}.mp4"
 		class="row-start-1 row-span-1 col-start-1 col-span-1 w-full z-0"
 	/>
 	<picture
@@ -45,38 +46,38 @@ let playFocus = () => {
 		class="row-start-1 row-span-1 col-start-1 col-span-1 z-10 w-full aspect-[7/9]" 
 	>
 		<source
-			srcset="thumbnails/thumbnail{num}-400.webp, thumbnails/thumbnail{num}-800.webp 2x"
+			srcset="thumbnails/thumbnail{num}{lang=="en"?"_en":""}-400.webp, thumbnails/thumbnail{num}{lang=="en"?"_en":""}-800.webp 2x"
 			media="(max-width:400px)"
 			type="image/webp"
 		/>
 		<source
-			srcset="thumbnails/thumbnail{num}-400.jpg, thumbnails/thumbnail{num}-800.jpg 2x "
+			srcset="thumbnails/thumbnail{num}{lang=="en"?"_en":""}-400.jpg, thumbnails/thumbnail{num}{lang=="en"?"_en":""}-800.jpg 2x "
 			media="(max-width:400px)"
 			type="image/jpeg"
 		/>
 		<source
-			srcset="thumbnails/thumbnail{num}-500.webp, thumbnails/thumbnail{num}-800.webp 2x"
+			srcset="thumbnails/thumbnail{num}{lang=="en"?"_en":""}-500.webp, thumbnails/thumbnail{num}{lang=="en"?"_en":""}-800.webp 2x"
 			media="(max-width:500px)"
 			type="image/webp"
 		/>
 		<source
-			srcset="thumbnails/thumbnail{num}-500.jpg, thumbnails/thumbnail{num}-800.jpg 2x"
+			srcset="thumbnails/thumbnail{num}{lang=="en"?"_en":""}-500.jpg, thumbnails/thumbnail{num}{lang=="en"?"_en":""}-800.jpg 2x"
 			media="(max-width:500px)"
 			type="image/jpeg"
 		/>
 		<source
-			srcset="thumbnails/thumbnail{num}-600.webp, thumbnails/thumbnail{num}-800.webp 2x"
+			srcset="thumbnails/thumbnail{num}{lang=="en"?"_en":""}-600.webp, thumbnails/thumbnail{num}{lang=="en"?"_en":""}-800.webp 2x"
 			media="(max-width:600px)"
 			type="image/webp"
 		/>
 		<source
-			srcset="thumbnails/thumbnail{num}-600.jpg, thumbnails/thumbnail{num}-800.jpg 2x"
+			srcset="thumbnails/thumbnail{num}{lang=="en"?"_en":""}-600.jpg, thumbnails/thumbnail{num}{lang=="en"?"_en":""}-800.jpg 2x"
 			media="(max-width:600px)"
 			type="image/jpeg"
 		/>
-		<source srcset="thumbnails/thumbnail{num}-700.webp , thumbnails/thumbnail{num}-800.webp 2x" type="image/webp" />
-		<source srcset="thumbnails/thumbnail{num}-700.jpg, thumbnails/thumbnail{num}-800.jpg 2x" type="image/jpeg" />
-		<img src="thumbnails/thumbnail{num}-800.jpg" alt={"Thumbnail pour video "+num} loading={num==1?"eager":"lazy"} class="w-full aspect-[7/9]"/>
+		<source srcset="thumbnails/thumbnail{num}{lang=="en"?"_en":""}-700.webp , thumbnails/thumbnail{num}{lang=="en"?"_en":""}-800.webp 2x" type="image/webp" />
+		<source srcset="thumbnails/thumbnail{num}{lang=="en"?"_en":""}-700.jpg, thumbnails/thumbnail{num}{lang=="en"?"_en":""}-800.jpg 2x" type="image/jpeg" />
+		<img src="thumbnails/thumbnail{num}{lang=="en"?"_en":""}-800.jpg" alt={"Thumbnail pour video "+num} loading={num==1?"eager":"lazy"} class="w-full aspect-[7/9]"/>
 	</picture>
 	<div bind:this={playOverlay} on:click={swap}  class="row-start-1 row-span-1 col-start-1 col-span-1 grid bg-[rgba(0,0,0,0.5)] w-full h-full z-30  cursor-pointer transition-opacity">
 		<button

@@ -27,7 +27,7 @@
 	<meta name="description" content="Voici le site web que j'ai créé dans le but de trouver un emploi dans le domaine du développement web.">
 </svelte:head>
 
-<div id="fluffs -z-10">
+<div id="fluffs" class="-z-10 hidden 2xl:block">
 	<div class="fixed w-6/12 -z-10">
 		<Fluff/>
 	</div>
@@ -71,7 +71,7 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 		xl:col-start-2 xl:self-center
   2xl:col-start-2 2xl:col-span-1 2xl:row-start-1 2xl:row-span-3 2xl:justify-self-end 2xl:mt-0 2xl:w-full"
 	>
-		<VideoContainer num={'1'} />
+		<VideoContainer num={'1'} lang="fr" />
 	</div>
 
 	<div class="relative xl:row-start-3 2xl:self-start">
@@ -159,7 +159,7 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 		xl:col-start-2 xl:self-center
   2xl:col-start-2 2xl:col-span-1 2xl:row-start-1 2xl:row-span-3 2xl:justify-self-end 2xl:mt-0 2xl:w-full"
 	>
-		<VideoContainer num={'2'} />
+		<VideoContainer num={'2'} lang="fr" />
 	</div>
 
 	<div class="relative xl:row-start-3 2xl:self-start">
@@ -241,7 +241,7 @@ xl:grid xl:grid-cols-[repeat(2,auto)] xl:justify-items-center
 		xl:col-start-2 xl:self-center
   2xl:col-start-2 2xl:col-span-1 2xl:row-start-1 2xl:row-span-3 2xl:justify-self-end 2xl:mt-0 2xl:w-full"
 	>
-		<VideoContainer num={'3'} />
+		<VideoContainer num={'3'} lang="fr" />
 	</div>
 
 	<div class="relative p-4
